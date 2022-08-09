@@ -1,0 +1,151 @@
+// APPLICATION NO.                        : 001
+// RELEASE DATE                           : 07/08/2022
+// PROGRAM TARGET                         : TESTING LCD FUNCTIONALITIES
+// USED MCAL LIBRARIES PERIPHIRALS        : DIO
+// USED HARDWARE LIBRARIES                : LCD
+// TESTED FUNCTIONS SUMMARY               : LCD write command, LCD write string, LCD write numbers 
+// APPLICATION FUNCTONING (Y/N)           : Y
+
+
+// HARDWARE CONFIGURATION SUMMARY :::::::::::::::::::::::::::::::::::::::
+
+// LCD CONFIGURATIONS::
+---------LCD_DATA_PORT DIO_PORTD
+---------LCD_COMMAND_PORT DIO_PORTC
+
+---------LCD_RS_PIN PINC0
+---------LCD_EN_PIN PINC1
+---------LCD_RW_PIN PINC2
+
+// END CONFIGURATIONS::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// PROGRAM START ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#include "atmega32_drivers/atmega32_registers.h"
+#include "atmega32_drivers/dio.h"
+#include "HW_drivers/LCD.h"
+#include <util/delay.h>
+
+int main (void)
+{
+	u8 *start_string ="Starting...\n";
+	LCD_init();
+	LCD_animate_string(start_string,200);
+	_delay_ms(3000);
+	LCD_writecommand(lcd_clear_screen);
+	LCD_writecommand(lcd_return_home);
+	LCD_writecommand(lcd_cursor_blink_on);
+	LCD_animate_string("EZYAK\n",200);
+	_delay_ms(3000);
+	LCD_writecommand(lcd_clear_screen);
+	LCD_writecommand(lcd_return_home);
+	LCD_writecommand(lcd_cursor_blink_on);
+	LCD_animate_string("3AMEL EH :D\n",200);
+
+	while (1)
+	{
+
+	}
+	return 0;
+}
+// PROGRAM END :::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::
+
+
+// APPLICATION NO.                        : 002
+// RELEASE DATE                           : 07/08/2022
+// PROGRAM TARGET                         : TESTING EXTERNAL INTERRUPT INT0 WITHOUT EXT. INT. DRIVERS, TESTING IMPLEMENTED INTERRUPT HEADER FILE
+// USED MCAL LIBRARIES PERIPHIRALS        : DIO
+// USED HARDWARE LIBRARIES                : LCD
+// TESTED FUNCTIONS SUMMARY               : LCD write command, LCD write string, LCD write numbers 
+// APPLICATION FUNCTONING (Y/N)           : Y
+
+
+// HARDWARE CONFIGURATION SUMMARY :::::::::::::::::::::::::::::::::::::::
+
+// LCD CONFIGURATIONS::
+---------LCD_DATA_PORT DIO_PORTD
+---------LCD_COMMAND_PORT DIO_PORTC
+
+---------LCD_RS_PIN PINC0
+---------LCD_EN_PIN PINC1
+---------LCD_RW_PIN PINC2
+
+// END CONFIGURATIONS::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// PROGRAM START ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#include"HW_drivers/keypad.h"
+#include "HW_drivers/LCD.h"
+#include <util/delay.h>
+#include "atmega32_drivers/interrupt.h"
+
+#define SET_BIT(R,N) R|=1<<N
+#define CLEAR_BIT(R,N) R&=~(1<<N)
+#define TOGGLE_BIT(R,N) R^=(1<<N)
+#define GET_BIT(R,N) ((R&(1<<N))>>N)
+
+volatile u8 c=0x00;
+
+int main (void)
+{
+	//ENABLE EXTERNAL INTERRUPT
+	SET_BIT(SREG,7);
+	SET_BIT(GICR,6);
+	SET_BIT(MCUCR,0);
+
+	DIO_set_pin_input(DIO_PORTD,PIND2);
+	LCD_init();
+
+	LCD_animate_string("starting...\n",200);
+	_delay_ms(3000);
+	LCD_writecommand(lcd_clear_screen);
+	LCD_writecommand(lcd_return_home);
+	LCD_writecommand(lcd_cursor_blink_on);
+
+
+	while (1)
+	{
+		if (GET_BIT(c,0)==0)
+		{
+			LCD_write_string("|c=zero\n");
+			LCD_write_number(c);
+			_delay_ms(1000);
+			LCD_writecommand(lcd_clear_screen);
+			LCD_writecommand(lcd_return_home);
+			LCD_writecommand(lcd_cursor_blink_on);
+		}
+
+		if (GET_BIT(c,0)==1)
+		{
+			LCD_write_string("|c=\n");
+			LCD_write_number(c);
+			_delay_ms(1000);
+			LCD_writecommand(lcd_clear_screen);
+			LCD_writecommand(lcd_return_home);
+			LCD_writecommand(lcd_cursor_blink_on);
+		}
+
+
+	}
+	return 0;
+}
+
+ISR (INT0_vect)
+{
+
+	TOGGLE_BIT(c,0);
+
+
+}
+
+// PROGRAM END :::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::
