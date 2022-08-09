@@ -20,7 +20,7 @@ int main (void)
 
 	LCD_init();
 	keypad_init();
-	LCD_animate_string("starting...\n",200);
+	LCD_animate_string("let's start..\n",200);
 	_delay_ms(2000);
 	LCD_writecommand(lcd_clear_screen);
 	LCD_writecommand(lcd_return_home);

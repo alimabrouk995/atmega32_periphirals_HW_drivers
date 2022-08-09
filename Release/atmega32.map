@@ -416,7 +416,7 @@ LOAD g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  *(.fini0)
                 0x00001862                _etext = .
 
-.data           0x00800060      0x126 load address 0x00001862
+.data           0x00800060      0x128 load address 0x00001862
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -427,83 +427,83 @@ LOAD g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.
  .data          0x00800060        0x0 ./HW_drivers/keypad_16.o
  .data          0x00800060        0x0 ./HW_drivers/ssd.o
  .data          0x00800060        0x0 ./HW_drivers/ssd.c.o
- .data          0x00800060        0xd ./main.o
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .data          0x0080006d        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .data          0x0080006d        0x8 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
-                0x0080006d                __thenan_sf
- .data          0x00800075        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .data          0x00800075        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x00800075        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x00800075        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .data          0x00800075        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .data          0x00800075        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .data          0x00800075        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .data          0x00800075      0x100 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
-                0x00800075                __clz_tab
+ .data          0x00800060        0xf ./main.o
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .data          0x0080006f        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .data          0x0080006f        0x8 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+                0x0080006f                __thenan_sf
+ .data          0x00800077        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .data          0x00800077        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x00800077        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x00800077        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .data          0x00800077        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .data          0x00800077        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .data          0x00800077        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00800077      0x100 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+                0x00800077                __clz_tab
  *(.data*)
  *(.rodata)
  *(.rodata*)
  .rodata.KPD_au8SwitchVal
-                0x00800175       0x10 ./HW_drivers/keypad_16.o
-                0x00800175                KPD_au8SwitchVal
+                0x00800177       0x10 ./HW_drivers/keypad_16.o
+                0x00800177                KPD_au8SwitchVal
  *(.gnu.linkonce.d*)
-                0x00800186                . = ALIGN (0x2)
- *fill*         0x00800185        0x1 00
-                0x00800186                _edata = .
-                0x00800186                PROVIDE (__data_end, .)
+                0x00800188                . = ALIGN (0x2)
+ *fill*         0x00800187        0x1 00
+                0x00800188                _edata = .
+                0x00800188                PROVIDE (__data_end, .)
 
-.bss            0x00800186        0x0
-                0x00800186                PROVIDE (__bss_start, .)
+.bss            0x00800188        0x0
+                0x00800188                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x00800186        0x0 ./math_functions/math_functions.o
- .bss           0x00800186        0x0 ./atmega32_drivers/dio.o
- .bss           0x00800186        0x0 ./atmega32_drivers/timer0.o
- .bss           0x00800186        0x0 ./HW_drivers/LCD.o
- .bss           0x00800186        0x0 ./HW_drivers/keypad_16.o
- .bss           0x00800186        0x0 ./HW_drivers/ssd.o
- .bss           0x00800186        0x0 ./HW_drivers/ssd.c.o
- .bss           0x00800186        0x0 ./main.o
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
- .bss           0x00800186        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800188        0x0 ./math_functions/math_functions.o
+ .bss           0x00800188        0x0 ./atmega32_drivers/dio.o
+ .bss           0x00800188        0x0 ./atmega32_drivers/timer0.o
+ .bss           0x00800188        0x0 ./HW_drivers/LCD.o
+ .bss           0x00800188        0x0 ./HW_drivers/keypad_16.o
+ .bss           0x00800188        0x0 ./HW_drivers/ssd.o
+ .bss           0x00800188        0x0 ./HW_drivers/ssd.c.o
+ .bss           0x00800188        0x0 ./main.o
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_usi_to_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clzsi2.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x00800188        0x0 g:/engineering/embedded systems/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clz.o)
  *(.bss*)
  *(COMMON)
-                0x00800186                PROVIDE (__bss_end, .)
+                0x00800188                PROVIDE (__bss_end, .)
                 0x00001862                __data_load_start = LOADADDR (.data)
-                0x00001988                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000198a                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800186        0x0
-                0x00800186                PROVIDE (__noinit_start, .)
+.noinit         0x00800188        0x0
+                0x00800188                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800186                PROVIDE (__noinit_end, .)
-                0x00800186                _end = .
-                0x00800186                PROVIDE (__heap_start, .)
+                0x00800188                PROVIDE (__noinit_end, .)
+                0x00800188                _end = .
+                0x00800188                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
